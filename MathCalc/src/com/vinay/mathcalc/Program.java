@@ -26,9 +26,11 @@ public class Program {
             double x = input.nextInt();
             System.out.println("Enter 2nd no. :");
             double y = input.nextInt();
-            System.out.println("Press + for add");
-            System.out.println("Press - for sub");
-            System.out.println("Press * for mul");
+            System.out.println("Press + to add");
+            System.out.println("Press - to subtract");
+            System.out.println("Press * to multiply");
+            System.out.println("Press / to divide");
+            System.out.println("Press ^ for power");
 
             MathCommand cmd = MathFactory.get(input.next());
             if (cmd != null) {
@@ -36,6 +38,9 @@ public class Program {
             } else {
                 System.out.println("Invalid input");
             }
+            System.out.println("Do you want to continue?[Y/N]");
+            if(input.next().equalsIgnoreCase("n"))
+                System.exit(0);
             // TODO code application logic here
         }
     }

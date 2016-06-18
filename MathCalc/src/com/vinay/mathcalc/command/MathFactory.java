@@ -21,6 +21,12 @@ public class MathFactory{
        else if(para.equals("*")){
            return new MulCommand();
        }
+       else if(para.equals("^")){
+           return new PowCommand();
+       }
+       else if(para.equals("/")){
+           return new DivideCommand();
+       }
        else if(para.equals("x")){
            return new ExitCommand();
        }
